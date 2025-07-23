@@ -7,7 +7,7 @@
 * **Interactive Web UI:** Simple and intuitive interface powered by Streamlit.
 * **Image Upload & Cropping:** Users can upload an image and use the `streamlit-cropper` to select the exact region of interest.
 * **Top 5 Predictions:** Provides the top 5 most likely dog breeds instead of just one.
-* **High Accuracy Model:** Built by fine-tuning a state-of-the-art ResNet50V2 model.
+* **High Accuracy Model:** Built by training a state-of-the-art ResNet50V2 model.
 
 ---
 
@@ -22,20 +22,22 @@
 ## Project Structure
 
 ```
-Dog-Breed-Classifier-App/
+Dog-Breed-Classifier/
 │
-├── Labels/
-│   └── id_to_breed.json              # Maps model IDs to breed names.
-│
-├── Models/
-│   ├── best_dog_breed_model.keras    # The best performing model saved during training.
-│   ├── dog_breed_classifier.keras    # Latest saved model.
+├── Dog-Breed-Classifier-App/
+│   └── Labels/
+|       └── id_to_breed.json              # Maps model IDs to breed names.
+|   └── Models/
+│       ├── best_dog_breed_model.keras    # The best performing model saved during training.
+│       ├── dog_breed_classifier.keras    # Latest saved model.
 │   └── dog_breed_classifier.py       # The Streamlit application script.
 │
 ├── Model Training/
 │   └── dog_breed_classifier_model_training.py  # Script for training the model.
 │
 ├── .gitattributes
+├── LICENSE
+├── README.md
 └── requirements.txt                  # Python dependencies for the project.
 ```
 
@@ -71,8 +73,7 @@ Follow these instructions to get the application running on your local machine.
 
 ### Data Setup for Training
 
-The model was trained on the **Stanford Dogs Dataset**, sourced from Kaggle. To run the training script (`dog_breed_classifier_model_training.py`), you must run on google colab orfdownload the dataset and place it in a structure that the script can read.
-
+The model was trained on the **Stanford Dogs Dataset**, sourced from Kaggle. To run the training script (`dog_breed_classifier_model_training.py`), you must run on google colab or download and read the dataset.
 ---
 
 ## Usage
@@ -82,7 +83,7 @@ The model was trained on the **Stanford Dogs Dataset**, sourced from Kaggle. To 
 To start the web application, run the following command in your terminal. This will launch a new tab in your browser with the app.
 
 ```sh
-streamlit run Models/dog_breed_classifier.py
+streamlit run dog_breed_classifier.py
 ```
 
 ### 2. Training the Model
@@ -101,8 +102,7 @@ python "Model Training/dog_breed_classifier_model_training.py"
 * **Dataset:** Trained on the [Stanford Dogs Dataset](https://www.kaggle.com/datasets/jessicali9530/stanford-dogs-dataset) from Kaggle.
 * **Performance:** The model achieved the following final metrics on the test set:
     * **Test Accuracy:** **81.20%**
-    * **Test Loss:** **0.5986**
-    * The best validation accuracy during training was **81.05%**.
+    * **Validation Accuracy:** **81.05%**.
 
 ---
 
