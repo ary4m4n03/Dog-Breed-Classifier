@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.resnet_v2 import preprocess_input as resnet_preprocess_input
+from tensorflow.keras.preprocessing import image # type: ignore
+from tensorflow.keras.applications.resnet_v2 import preprocess_input as resnet_preprocess_input # type: ignore
 import numpy as np
 from PIL import Image
 import json
