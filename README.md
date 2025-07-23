@@ -74,6 +74,7 @@ Follow these instructions to get the application running on your local machine.
 ### Data Setup for Training
 
 The model was trained on the **Stanford Dogs Dataset**, sourced from Kaggle. To run the training script (`dog_breed_classifier_model_training.py`), you must run on google colab or download and read the dataset.
+
 ---
 
 ## Usage
