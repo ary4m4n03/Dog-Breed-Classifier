@@ -56,7 +56,7 @@ Follow these instructions to get the application running on your local machine.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+    git clone https://github.com/ary4m4n03/Dog-Breed-Classifier.git
     cd Dog-Breed-Classifier-App
     ```
 
